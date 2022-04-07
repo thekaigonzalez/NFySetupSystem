@@ -1,18 +1,23 @@
 {
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "chalk": "^5.0.1"
+  },
   "name": "nfysetupsystem",
-  "version": "0.0.1",
-  "description": "A setup system for NFy-based apps.",
-  "main": "index.js",
+  "version": "1.0.0",
+  "main": "setup-dirs.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thekaigonzalez/NFySetupSystem.git"
   },
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "chalk": "^5.0.1",
-    "inquirer": "^8.2.2",
-    "nanospinner": "^1.0.0",
-    "spinner": "^0.2.4"
-  }
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thekaigonzalez/NFySetupSystem/issues"
+  },
+  "homepage": "https://github.com/thekaigonzalez/NFySetupSystem#readme",
+  "description": ""
 }

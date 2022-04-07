@@ -1,16 +1,17 @@
-# Integrate unit testing for NFy
+# DirSetup for NFy
 
-```
-npm init
+DirSetup
 
-```
-then place index.js into the nfy directory. With package.json, add
+run using `node index.mjs
+
+## Args
+
+The format should be
 
 ```js
 
-"type": "module"
+node setup-dirs.mjs spec=SPEC debug=true|false
 
 ```
-and run `node index.js`
 
-and then check.
+You can set debug and spec, but they need to be in that order.
