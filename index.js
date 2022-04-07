@@ -14,6 +14,33 @@ function printWarning(msg) {
     console.log(chalk.yellow('warning:') + ' ' + msg);
 }
 
+let specFile = {
+    "Regular": {
+        "songs_dir": "songs",
+        "playlists_dir": "playlists",
+        "support": true,
+        "api": "v1"
+    },
+    "Mono": {
+        "songs_dir": "songs",
+        "playlists_dir": "playlists",
+        "support": true,
+        "api": "v2"
+    },
+    "JS": {
+        "songs_dir": "songs",
+        "playlists_dir": "playlists",
+        "support": false,
+        "api": "v2"
+    },
+    "Andro": {
+        "songs_dir": "songs",
+        "playlists_dir": "playlists",
+        "support": false,
+        "api": "v2"
+    }
+}
+
 let spec = "Regular"
 
 console.log("using the NSS version " + chalk.yellowBright(VERSION.toString()))
@@ -90,12 +117,6 @@ if (Client === 'nfy_regular') {
     printWarning("NFy Andro support is experimental!, and NFy Andro is excluded from being behind two standards.\nUse at own risk.");
     spec = "Andro"
 }
-
-const specFile = JSON.parse(
-    await readFile(
-      new URL('./spec.json', import.meta.url)
-    )
-);
 
 if (specFile[spec] !== null) {
     console.log("found requested spec... Starting daemon.")
