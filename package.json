@@ -1,0 +1,19 @@
+{
+  "name": "nfysetupsystem",
+  "version": "0.0.1",
+  "description": "A setup system for NFy-based apps.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "inquirer": "^8.2.2",
+    "nanospinner": "^1.0.0",
+    "spinner": "^0.2.4"
+  }
+}
