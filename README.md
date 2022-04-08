@@ -1,3 +1,5 @@
+# THIS REPOSITORY HAS BEEN DEPRECATED FOR NFySetupSystem!!!
+
 # DirSetup for NFy
 
 DirSetup

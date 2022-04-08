@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import { existsSync , mkdirSync } from 'fs'
+import { exists, existsSync , mkdirSync } from 'fs'
 
 let clean = true
 let sp = "NFy"
@@ -24,6 +24,47 @@ if (st != null) {
 var timeout = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 console.log(chalk.yellowBright("checking spec for: " + sp + "\n"))
+
+async function printDebugMsg(ms) {
+    if (debug) {
+        console.log(chalk.blueBright("-> " + ms)) 
+        await timeout(700)
+    }
+}
+
+async function printError(msg) {
+    console.log(chalk.redBright(msg))
+}
+
+await printDebugMsg("checking for EXE for " + sp)
+
+if (sp === 'NFy') {
+    if (!existsSync("NFy.exe")) {
+        await printError("could not find exe for the specified version. `" + sp + "'")
+        process.exit(1)
+    }
+}
+
+if (sp === 'NFyMono') {
+    if (!existsSync("njmono.exe")) {
+        await printError("could not find exe for the specified version. `" + sp + "'")
+        process.exit(1)
+    }
+}
+
+if (sp === 'NFyAndro') {
+    if (!existsSync("NFyAndro.apk")) {
+        await printError("could not find exe for the specified version. `" + sp + "'")
+        process.exit(1)
+    }
+}
+
+if (sp === 'NFYJS') {
+    if (!existsSync("NFY.exe")) {
+        await printError("could not find exe for the specified version. `" + sp + "'")
+        process.exit(1)
+    }
+}
 
 if (!existsSync("songs")) {
 
